@@ -22,7 +22,7 @@ st.write(today_row) #오늘 날짜에 해당하는 행 출력
 #metric 활용하기
 st.write("metric으로 통계 정보를 전광판 형태로 시각화할 수 있어요.")
 st.title(today_row ['요리명'].item())
-st.metric("메뉴", today_row['요리명'] ,border=True)
+st.metric("메뉴", today_row['요리명'].item() ,border=True)
 
 #metric 열 구성하기
 a, b = st.columns(2)
@@ -67,7 +67,7 @@ with st.form("급식 의견 받아요"):
     b= st.selectbox("항목 중 하나를 선택할 수 있는 입력폼", ["월", "화", "수", "목", "금"])
     c= st.text_input("주관식 입력폼", placeholder="placehoder에 들어가는 값이 힌트가 됩니다.")
     d= st.slider("슬라이더를 조정해서 값을 선택하는 입력폼", 1, 5)
-    submitted = st.form_submitted_button()
+    submitted = st.form_submitt_button("제출")
 
 #제출 내용 확인
 if submitted:
