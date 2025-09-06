@@ -22,7 +22,7 @@ st.write(today_row) #오늘 날짜에 해당하는 행 출력
 #metric 활용하기
 st.write("metric으로 통계 정보를 전광판 형태로 시각화할 수 있어요.")
 st.title(today_row ['요리명'].item())
-st.metric("메뉴", today_row['요리명'].item() ,border=True)
+st.metric("오늘의 메뉴", today_row['요리명'].item() ,border=True)
 
 #metric 열 구성하기
 a, b = st.columns(2)
